@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Main-->
+    <title>Calculator</title>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <!--Outside Links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        width: 100%;
+        height: 100%;
+    }
+    .calculator {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: gray;
+        width: 400px;
+        font-size: larger;
+        font-family: "Source Code Pro", monospace;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    .calculator input {
+        font-weight: 500 !important;
+        font-size: xx-large;
+        width: 90%;
+        padding: 10px;
+        margin: 20px;
+        font-weight: 900;
+        border-style: ridge;
+        background-color: #dedede;
+        border-color: white;
+    }
+    .calculator .buttons {
+        width: 90%;
+        height: 90%;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .calculator .buttons .button-normal {
+        width: 75px;
+        height: 75px;
+        padding: 10px;
+        margin: 3px;
+        margin-top: 10px;
+        border-color: white;
+    }
+    .calculator .buttons .button-wide {
+        width: 168px;
+        height: 75px;
+        padding: 10px;
+        margin: 3px;
+        margin-top: 10px;
+        border-color: white;
+    }
+    .number {
+        background-color: rgb(188, 188, 188);
+    }
+    .operator {
+        background-color: rgb(255, 196, 86);
+    }
+</style>
+<body>
+    <!--Main Container-->
+    <div class="calculator">
+        <input id="input" readonly="true" placeholder="0">
+        <div class="buttons">
+            <button id="btn_c" onclick="button_click('clear')" class="button-wide number">...</button>
+            <button id="btn_b" onclick="button_click('back')" class="button-normal number">&lt;-</button>
+            <button id="btn_/" onclick="button_click('/')"  class="button-normal operator">/</button>
+            <button id="btn_7" onclick="button_click('7')" class="button-normal number">7</button>
+            <button id="btn_8" onclick="button_click('8')" class="button-normal number">8</button>
+            <button id="btn_9" onclick="button_click('9')" class="button-normal number">9</button>
+            <button id="btn_*" onclick="button_click('*')"  class="button-normal operator">*</button>
+            <button id="btn_6" onclick="button_click('6')" class="button-normal number">6</button>
+            <button id="btn_5" onclick="button_click('5')" class="button-normal number">5</button>
+            <button id="btn_4" onclick="button_click('4')" class="button-normal number">4</button>
+            <button id="btn_-" onclick="button_click('-')"  class="button-normal operator">-</button>
+            <button id="btn_3" onclick="button_click('3')" class="button-normal number">3</button>
+            <button id="btn_2" onclick="button_click('2')" class="button-normal number">2</button>
+            <button id="btn_1" onclick="button_click('1')" class="button-normal number">1</button>
+            <button id="btn_+" onclick="button_click('+')"  class="button-normal operator">+</button>
+            <button id="btn_0" onclick="button_click('0')" class="button-normal number">0</button>
+            <button id="btn_." onclick="button_click('.')" class="button-normal number">.</button>
+            <button id="btn_=" onclick="button_click('=')"  class="button-wide operator">=</button>
+        </div>
+    </div>
+</body>
+</html>
